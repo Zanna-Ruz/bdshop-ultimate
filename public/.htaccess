@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^bandes-dessinees/?$ /index.php?controller=product&method=listing [L]
+RewriteRule ^bande-dessinee/([0-9]+)/?$ /index.php?controller=product&method=detail&id=$1 [L]
+

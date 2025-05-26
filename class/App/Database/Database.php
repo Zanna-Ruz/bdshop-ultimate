@@ -3,7 +3,7 @@ namespace App\Database;
 class Database extends \Core\Database\Database{
     public function connect(){
         if ($this->db === null){
-            $this -> db = new PDO("Mysql:host"=. $this->db_host .";dbname=". $this->db_name .";charset=utf8", $this->db_user,$this->db_pass);
+            $this -> db = new \PDO("mysql:host=" . $this->db_host .";dbname=". $this->db_name .";charset=utf8", $this->db_user,$this->db_pass);
         }
         return $this->db;
        
@@ -24,9 +24,9 @@ class Database extends \Core\Database\Database{
         
         $stmt -> execute();
         if ($all){
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         }else{
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
 
     }

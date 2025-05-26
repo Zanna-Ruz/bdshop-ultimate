@@ -5,7 +5,7 @@ class App {
 
     public static function db(){
         if (self::$db=== null){
-            self::$db = new \App\Database\Database(DB_HOST,DB_NAME,DB_USER,DB_PASS).
+            self::$db = new \App\Database\Database(DB_HOST,DB_NAME,DB_USER,DB_PASS);
         }
         return self::$db;
     }

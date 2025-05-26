@@ -1,3 +1,7 @@
+<?php
+var_dump(new \App\Entity\Product($product));
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
