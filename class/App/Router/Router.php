@@ -15,6 +15,9 @@ class Router extends \Core\Router\Router {
             } elseif ($controller == 'product' && $method = 'detail' && isset($_GET['id'])){
                 $controller = new \App\Controller\Product();
                 $controller->detail($_GET['id']);
+            }elseif ($controller == "admin" && $method="login"){
+                $controller = new \App\Controller\Admin();
+                $controller->login();
             }
         } else{
             //Erreur 404

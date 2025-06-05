@@ -9,12 +9,11 @@ if (!empty($_GET['page'])){
 }
 if ($page =="home"){
 
-}elseif ($page=="listing"){
+} elseif ($page=="listing"){
     $controller = new \App\Controller\Product();
     $controller->listing();
 
-}
-elseif ($page=="detail" && !empty ($_GET['id'])){ 
+} elseif ($page=="detail" && !empty ($_GET['id'])){ 
     $controller = new \App\Controller\Product();
     $controller->detail($_GET['id']);
 
